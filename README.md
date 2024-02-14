@@ -11,6 +11,10 @@ Features would include:
 # Code
 I've used Next.js as it was the quickest way to get setup with a TS environment for both React and Server endpoints (api).
 
+The `src/types.ts` describes the domain.
+There is an API query endpoint that allows for querying the user data. 
+A scant UI exists that connects the client and server that both implement the `EnergyDataService` type.
+
 # Development
 
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
