@@ -1,3 +1,18 @@
+## Deploy to Google Cloud Run
+
+[![Run on Google Cloud](https://deploy.cloud.run/button.svg)](https://deploy.cloud.run)
+
+# Idea
+My idea is to use the users energy consumption and tarrif data to create a personalised, web internet accessible smart meter. 
+Features would include:
+- User input quota's to help track energy usage and report overages. Would be set initially based on home sized averages.
+- Analysis based guidance on how to make the best use of lower tarrif periods
+
+# Code
+I've used Next.js as it was the quickest way to get setup with a TS environment for both React and Server endpoints (api).
+
+# Development
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
