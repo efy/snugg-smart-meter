@@ -15,6 +15,9 @@ function totalUsage(consumption: ConsumptionDatapoint[]): number {
   return usage
 }
 
+const electricityQuota = 15;
+const gasQuota = 8;
+
 export default function Home() {
   const [electricityConsumption, setElectricityConsumption] = useState<ConsumptionDatapoint[]>([]);
   const [gasConsumption, setGasConsumption] = useState<ConsumptionDatapoint[]>([]);
@@ -49,12 +52,14 @@ export default function Home() {
       <div>
         <h2>Electricity</h2>
         <h3>Usage</h3>
-        <Meter barColor="#316c72" backgroundColor="#f0efef" width={400} height={30} quota={15} usage={totalUsage(electricityConsumption)}/>
+        <Meter barColor="#316c72" backgroundColor="#f0efef" width={400} height={30} quota={electricityQuota} usage={totalUsage(electricityConsumption)}/>
+        <p>Used {totalUsage(electricityConsumption).toFixed(2)} kW-h of {electricityQuota} kW-h quota</p>
       </div>
       <div>
         <h2>Gas</h2>
         <h3>Usage</h3>
-        <Meter barColor="#316c72" backgroundColor="#f0efef" width={400} height={30} quota={8} usage={totalUsage(gasConsumption)}/>
+        <Meter barColor="#316c72" backgroundColor="#f0efef" width={400} height={30} quota={gasQuota} usage={totalUsage(gasConsumption)}/>
+        <p>Used {totalUsage(gasConsumption).toFixed(2)}m³  of {gasQuota}m³ quota</p>
       </div>
     </main>
   );
